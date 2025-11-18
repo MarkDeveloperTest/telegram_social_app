@@ -11,10 +11,17 @@
     <h1>MiniGram</h1>
   </header>
 
-  <main id="feed">
+  <!-- Telegram Login -->
+  <div id="login-container">
+    <button id="telegram-login-btn">Sign in with Telegram</button>
+  </div>
+
+  <!-- Feed -->
+  <main id="feed" style="display:none;">
     <!-- Posts will be loaded here -->
   </main>
 
+  <!-- Post Template -->
   <template id="post-template">
     <div class="post">
       <div class="post-header">
@@ -33,9 +40,13 @@
     </div>
   </template>
 
-  <!-- Load Firebase first -->
+  <!-- Telegram Web App JS -->
+  <script async src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <!-- Firebase -->
   <script type="module" src="firebase.js"></script>
-  <!-- Then main script -->
+
+  <!-- Main App -->
   <script type="module" src="script.js"></script>
 </body>
 </html>

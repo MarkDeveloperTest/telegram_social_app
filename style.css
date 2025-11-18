@@ -13,7 +13,6 @@ body {
   flex-direction: column;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: center;
@@ -31,15 +30,29 @@ header h1 {
   color: #333;
 }
 
-/* Feed container */
+#login-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#telegram-login-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #0088cc;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 #feed {
   width: 100%;
-  max-width: 480px; /* good for phones */
+  max-width: 480px;
   margin: 10px auto;
   padding: 0 8px;
 }
 
-/* Post card */
 .post {
   background-color: white;
   margin-bottom: 15px;
@@ -61,7 +74,6 @@ header h1 {
   border-top-right-radius: 12px;
 }
 
-/* Actions */
 .post-actions {
   padding: 8px 12px;
   display: flex;
@@ -79,14 +91,12 @@ header h1 {
   transform: scale(1.2);
 }
 
-/* Caption */
 .post-caption {
   padding: 6px 12px 8px 12px;
   font-size: 14px;
   color: #333;
 }
 
-/* Comments section */
 .comments-section {
   padding: 0 12px 8px 12px;
 }
@@ -102,7 +112,6 @@ header h1 {
   border-bottom: 1px solid #eee;
 }
 
-/* Comment input */
 .comment-input {
   width: 100%;
   padding: 7px 10px;
@@ -115,23 +124,4 @@ header h1 {
 
 .comment-input:focus {
   border-color: #007aff;
-}
-
-/* Scroll feed on mobile */
-body, html {
-  overflow-x: hidden;
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 18px;
-  }
-
-  .post-actions button {
-    font-size: 26px;
-  }
-
-  .post-caption {
-    font-size: 13px;
-  }
 }

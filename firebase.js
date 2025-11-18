@@ -1,12 +1,9 @@
 // firebase.js
-// Initialize Firebase for MiniGram
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
 
-// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyBIgc8p4dhhuZqPGDgqDGdezTXB4HPrMtI",
   authDomain: "telegram-social-d1264.firebaseapp.com",
@@ -17,7 +14,6 @@ const firebaseConfig = {
   measurementId: "G-1JZ0TW7KRB"
 };
 
-// Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const db = getFirestore(app);
