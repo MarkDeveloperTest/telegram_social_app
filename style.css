@@ -8,6 +8,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fafafa;
   color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -15,44 +18,40 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 10px;
+  padding: 12px 10px;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 header h1 {
-  font-size: 22px;
+  font-size: 20px;
   color: #333;
 }
 
-/* Feed */
+/* Feed container */
 #feed {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 0 10px;
+  width: 100%;
+  max-width: 480px; /* good for phones */
+  margin: 10px auto;
+  padding: 0 8px;
 }
 
 /* Post card */
 .post {
   background-color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.1s;
-}
-
-.post:hover {
-  transform: translateY(-2px);
 }
 
 .post-header {
-  padding: 12px 15px;
+  padding: 10px 12px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .post-image {
@@ -64,7 +63,7 @@ header h1 {
 
 /* Actions */
 .post-actions {
-  padding: 10px 15px;
+  padding: 8px 12px;
   display: flex;
   gap: 15px;
 }
@@ -72,9 +71,8 @@ header h1 {
 .post-actions button {
   border: none;
   background: none;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
-  transition: transform 0.1s;
 }
 
 .post-actions button:active {
@@ -83,14 +81,14 @@ header h1 {
 
 /* Caption */
 .post-caption {
-  padding: 0 15px 10px 15px;
+  padding: 6px 12px 8px 12px;
   font-size: 14px;
   color: #333;
 }
 
-/* Comments */
+/* Comments section */
 .comments-section {
-  padding: 0 15px 10px 15px;
+  padding: 0 12px 8px 12px;
 }
 
 .comments-list {
@@ -100,31 +98,40 @@ header h1 {
 }
 
 .comments-list div {
-  padding: 3px 0;
+  padding: 2px 0;
   border-bottom: 1px solid #eee;
 }
 
+/* Comment input */
 .comment-input {
   width: 100%;
-  padding: 8px 10px;
+  padding: 7px 10px;
   font-size: 14px;
   border-radius: 20px;
   border: 1px solid #ccc;
   outline: none;
   margin-top: 5px;
-  transition: border-color 0.2s;
 }
 
 .comment-input:focus {
   border-color: #007aff;
 }
 
-@media (max-width: 600px) {
-  #feed {
-    margin: 10px;
+/* Scroll feed on mobile */
+body, html {
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
   }
 
   .post-actions button {
-    font-size: 24px;
+    font-size: 26px;
+  }
+
+  .post-caption {
+    font-size: 13px;
   }
 }
