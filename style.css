@@ -1,4 +1,3 @@
-/* Reset default margins and paddings */
 * {
   margin: 0;
   padding: 0;
@@ -29,14 +28,14 @@ header h1 {
   color: #333;
 }
 
-/* Feed container */
+/* Feed */
 #feed {
   max-width: 600px;
   margin: 20px auto;
   padding: 0 10px;
 }
 
-/* Individual post */
+/* Post card */
 .post {
   background-color: white;
   margin-bottom: 20px;
@@ -63,7 +62,7 @@ header h1 {
   border-top-right-radius: 12px;
 }
 
-/* Actions (like/comment) */
+/* Actions */
 .post-actions {
   padding: 10px 15px;
   display: flex;
@@ -89,7 +88,7 @@ header h1 {
   color: #333;
 }
 
-/* Comments Section */
+/* Comments */
 .comments-section {
   padding: 0 15px 10px 15px;
 }
@@ -120,7 +119,6 @@ header h1 {
   border-color: #007aff;
 }
 
-/* Mobile-friendly */
 @media (max-width: 600px) {
   #feed {
     margin: 10px;
