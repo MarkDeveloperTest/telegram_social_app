@@ -1,42 +1,20 @@
-/* Basic page styling */
+/* Full pink background */
 body {
     margin: 0;
     padding: 0;
+    background: #ffb6c1; /* soft pink */
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
-}
-
-/* Header */
-header {
-    background: #ffffff;
-    padding: 14px;
     text-align: center;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    position: sticky;
-    top: 0;
+    padding-top: 60px;
 }
 
-#user-info {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0;
+h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-/* Login section */
-#telegram-login-container {
-    text-align: center;
-    margin-top: 60px;
-}
-
-#telegram-login-container h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-/* Main app content */
-#app-content {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
+p {
+    color: #444;
     font-size: 18px;
 }
