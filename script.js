@@ -1,7 +1,9 @@
 // Ensure the app only works inside Telegram Web App
 if (!window.Telegram || !window.Telegram.WebApp) {
-    alert("This app only works inside the Telegram iOS/Android app.");
-    document.body.innerHTML = "<h2>Please open this link inside Telegram.</h2>";
+    document.body.innerHTML = `
+        <h2>Please open this link inside the Telegram app.</h2>
+        <p><a href="https://t.me/app_test_app_bot">Open in Telegram</a></p>
+    `;
 } else {
     const tg = window.Telegram.WebApp;
 
