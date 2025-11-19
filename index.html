@@ -3,20 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram Login</title>
+  <title>MiniGram Telegram Web App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="login-container">
-      <h2>Sign in with Telegram</h2>
-      <script async 
-          src="https://telegram.org/js/telegram-widget.js?22"
-          data-telegram-login="app_test_app_bot"
-          data-size="large"
-          data-userpic="true"
-          data-onauth="onTelegramAuth(user)"
-          data-request-access="write">
-      </script>
+  <div id="app">
+    <h1 id="user-name"></h1>
+    <p>Welcome to MiniGram inside Telegram!</p>
   </div>
 
   <script src="script.js"></script>

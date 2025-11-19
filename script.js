@@ -1,17 +1,19 @@
-// Function called by Telegram Login Widget
-function onTelegramAuth(user) {
-    // Save user info in localStorage (one-time login)
-    localStorage.setItem("tgUser", JSON.stringify(user));
+// Ensure the app only works inside Telegram Web App
+if (!window.Telegram || !window.Telegram.WebApp) {
+    alert("This app only works inside the Telegram iOS/Android app.");
+    document.body.innerHTML = "<h2>Please open this link inside Telegram.</h2>";
+} else {
+    const tg = window.Telegram.WebApp;
 
-    // Redirect to main app page
-    window.location.href = "home.html";
-}
+    // Expand to full height inside Telegram
+    tg.expand();
 
-// Check if user is already logged in
-window.addEventListener("DOMContentLoaded", () => {
-    const storedUser = localStorage.getItem("tgUser");
-    if (storedUser) {
-        // User already logged in, redirect immediately
-        window.location.href = "home.html";
+    // Get Telegram user info
+    const user = tg.initDataUnsafe?.user;
+    if (!user) {
+        alert("Unable to get Telegram user info. Make sure you opened the app in Telegram.");
+    } else {
+        // Display user name at top
+        document.getElementById("user-name").textContent = `Hello, ${user.first_name}${user.username ? " (@" + user.username + ")" : ""}!`;
     }
-});
+}
