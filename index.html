@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram Login Example</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniGram - Telegram Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1 id="usernameDisplay">MiniGram</h1>
-  </header>
+    <!-- Header showing username -->
+    <header>
+        <h1 id="user-info">MiniGram</h1>
+    </header>
 
-  <!-- Login Section -->
-  <div id="login-container">
-    <h2>Please Sign In</h2>
-    <script 
-      async src="https://telegram.org/js/telegram-widget.js?22"
-      data-telegram-login="@app_test_app_bot" 
-      data-size="large"
-      data-userpic="true"
-      data-request-access="write"
-      data-auth-url=""
-      data-on-auth="onTelegramAuth(user)">
-    </script>
-  </div>
+    <!-- Telegram login widget container -->
+    <div id="telegram-login-container">
+        <h2>Sign in with Telegram</h2>
+        <script async 
+            src="https://telegram.org/js/telegram-widget.js?22"
+            data-telegram-login="@app_test_app_bot"
+            data-size="large"
+            data-userpic="true"
+            data-onauth="onTelegramAuth(user)"
+            data-request-access="write">
+        </script>
+    </div>
 
-  <!-- App Content -->
-  <div id="app-content" style="display:none;">
-    <p>Welcome to MiniGram!</p>
-  </div>
+    <!-- Main app content -->
+    <div id="app-content" style="display:none;">
+        <p>Welcome to MiniGram!</p>
+        <p>You are now signed in using your Telegram account.</p>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

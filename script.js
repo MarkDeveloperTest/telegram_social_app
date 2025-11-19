@@ -1,27 +1,30 @@
-// Check if user is already saved -> Auto Login
-const savedUser = JSON.parse(localStorage.getItem("telegramUser"));
+// AUTO LOGIN if user info is saved
+const savedUser = localStorage.getItem("tgUser");
 
 if (savedUser) {
-  showUser(savedUser);
+    const user = JSON.parse(savedUser);
+    showUser(user);
 }
 
-// TELEGRAM WIDGET CALLBACK
+// This function is called automatically AFTER Telegram login success
 function onTelegramAuth(user) {
-  // Save login to localStorage (remember forever)
-  localStorage.setItem("telegramUser", JSON.stringify(user));
+    // Save login permanently
+    localStorage.setItem("tgUser", JSON.stringify(user));
 
-  // Update UI
-  showUser(user);
+    // Update the UI
+    showUser(user);
 }
 
-// Update UI with logged-in user
+// Updates UI and hides login button
 function showUser(user) {
-  const displayName = user.first_name + (user.last_name ? " " + user.last_name : "");
-  document.getElementById("usernameDisplay").textContent = displayName;
+    const displayName = user.first_name + (user.last_name ? " " + user.last_name : "");
 
-  // Hide login widget
-  document.getElementById("login-container").style.display = "none";
+    // Show user name in header
+    document.getElementById("user-info").textContent = "Signed in as: " + displayName;
 
-  // Show app content
-  document.getElementById("app-content").style.display = "block";
+    // Hide login widget
+    document.getElementById("telegram-login-container").style.display = "none";
+
+    // Show main app
+    document.getElementById("app-content").style.display = "block";
 }
