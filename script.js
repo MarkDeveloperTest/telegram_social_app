@@ -1,16 +1,4 @@
-// Ensure the app only works inside Telegram Web App
-if (!window.Telegram || !window.Telegram.WebApp) {
-    document.body.innerHTML = `
-        <h2>Please open this link inside the Telegram app.</h2>
-        <p><a href="https://t.me/app_test_app_bot">Open in Telegram</a></p>
-    `;
-} else {
-    const tg = window.Telegram.WebApp;
-
-    // Expand to full height
-    tg.expand();
-
-    // Get Telegram user info
+   // Get Telegram user info
     const user = tg.initDataUnsafe?.user;
 
     if (!user) {
@@ -33,4 +21,3 @@ if (!window.Telegram || !window.Telegram.WebApp) {
 
         container.innerHTML = html;
     }
-}
