@@ -1,21 +1,17 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: pink;  /* Your chosen background color */
+  background-color: pink;  /* Same or different color if you want */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-#login-container {
+#app {
   text-align: center;
-  padding: 20px;
   background-color: rgba(255,255,255,0.9);
+  padding: 25px;
   border-radius: 15px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-h2 {
-  margin-bottom: 15px;
 }

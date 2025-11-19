@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pink Background</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="login-container">
+      <h2>Sign in with Telegram</h2>
+      <script async 
+          src="https://telegram.org/js/telegram-widget.js?22"
+          data-telegram-login="app_test_app_bot"
+          data-size="large"
+          data-userpic="true"
+          data-onauth="onTelegramAuth(user)"
+          data-request-access="write">
+      </script>
+  </div>
 
-<div id="login-container">
-    <h2>Sign in with Telegram</h2>
-    <script async 
-        src="https://telegram.org/js/telegram-widget.js?22"
-        data-telegram-login="app_test_app_bot"
-        data-size="large"
-        data-userpic="true"
-        data-onauth="onTelegramAuth(user)"
-        data-request-access="write">
-    </script>
-</div>
-
-<div id="app-content" style="display:none;">
-    <h1 id="user-name"></h1>
-    <p>You are now logged in.</p>
-</div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
